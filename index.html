@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Boldo</title>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope&family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- swiper js -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+		/>
+
+		<script>
+			tailwind.config = {
+				theme: {
+					container: {
+						screens: {
+							desktop: "1170px",
+						},
+					},
+					extends: {
+						fontFamily: {
+							openSans: "'Open Sans', sans-serif",
+							manrope: "'Manrope', sans-serif",
+						},
+					},
+				},
+			};
+		</script>
+
+		<style></style>
+		<link rel="stylesheet" href="./css/app.css" />
+	</head>
+	<body>
+		<section
+			class="bg-[#0A2640] pb-10"
+			style="
+				background-image: url('./images/bg.png');
+				background-repeat: no-repeat;
+				background-position: right top;
+			"
+		>
+			<nav
+				class="container mx-auto flex items-center justify-between flex-wrap w-full z-10 top-0 py-5 lg:px-0 px-5 z-50"
+			>
+				<div class="flex items-center flex-shrink-0 text-white mr-6">
+					<a
+						class="text-white no-underline hover:text-white hover:no-underline"
+						href="index.html"
+					>
+						<img src="./images/logo.png" class="w-[120px]" alt="" />
+					</a>
+				</div>
+
+				<div class="block lg:hidden flex items-center gap-4">
+					<button
+						class="block lg:hidden bg-white text-[#0A2640] px-11 py-2 rounded-full text-[16px]"
+					>
+						Log in
+					</button>
+					<button
+						id="nav-toggle"
+						class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white"
+					>
+						<svg
+							class="fill-current h-3 w-3"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<title>Menu</title>
+							<path
+								d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+							/>
+						</svg>
+					</button>
+				</div>
+
+				<div
+					class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+					id="nav-content"
+				>
+					<ul
+						class="list-reset lg:flex justify-end flex-1 items-center"
+					>
+						<li class="mr-3">
+							<a
+								class="inline-block py-2 px-4 text-white no-underline"
+								href="#"
+								>Product</a
+							>
+						</li>
+						<li class="mr-3">
+							<a
+								class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+								href="#"
+								>Services</a
+							>
+						</li>
+						<li class="mr-3">
+							<a
+								class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+								href="#"
+								>About</a
+							>
+						</li>
+						<li class="mr-3">
+							<a
+								class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+								href="#"
+								>Contact</a
+							>
+						</li>
+					</ul>
+					<button
+						class="hidden lg:block bg-white text-[#0A2640] px-11 py-2 rounded-full text-[16px]"
+					>
+						Log in
+					</button>
+				</div>
+			</nav>
+
+			<div
+				class="container mx-auto grid lg:grid-cols-2 grid-cols-1 gap-7 items-center py-10 lg:px-0 px-5"
+			>
+				<div class="space-y-5">
+					<h2
+						class="lg:text-[48px] text-3xl font-manrope text-white font-[400] lg:leading-[50px] leading-[40px]"
+					>
+						Save time by building fast with Boldo Template
+					</h2>
+					<p class="text-[#F1F1F1] text-[16px] font-openSans">
+						Funding handshake buyer business-to-business metrics
+						iPad partnership. First mover advantage innovator
+						success deployment non-disclosure.
+					</p>
+					<div class="space-x-7">
+						<button
+							class="bg-[#65E4A3] text-[#0A2640] px-12 py-2 border-2 border-[#69E6A6] rounded-full font-[700] font-openSans"
+						>
+							Buy template
+						</button>
+						<button
+							class="px-12 py-2 border-2 border-white rounded-full text-white capitalize"
+						>
+							expolore
+						</button>
+					</div>
+				</div>
+				<div>
+					<img
+						src="./images/hero.svg"
+						class="w-[493px] h-[423px] ml-auto z-50"
+						alt=""
+					/>
+				</div>
+			</div>
+			<div class="container mx-auto">
+				<img src="./images/brands.png" alt="" />
+			</div>
+		</section>
+
+		<!-- services section -->
+		<section class="container py-16 mx-auto lg:px-0 px-5">
+			<div class="text-center">
+				<p class="text-[#777777] text-[20] font-openSans">
+					Our Services
+				</p>
+				<h2 class="text-3xl text-black font-manrope lg:w-1/2 m-auto">
+					Handshake infographic mass market crowdfunding iteration.
+				</h2>
+			</div>
+			<div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-0 gap-7 mt-14">
+				<!-- services -->
+				<div>
+					<img src="./images/serivce/service-1.png" alt="" />
+					<div class="p-2">
+						<h2 class="text-[24px] font-openSans">
+							Cool feature title
+						</h2>
+						<p class="text-[#777777] font-[20px] font-openSans">
+							Learning curve network effects return on investment.
+						</p>
+						<a
+							href="#"
+							class="flex text-[14px] text-[#0A2640] font-[700] font-openSans"
+							>Explore page
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-5"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div>
+					<img src="./images/serivce/service-2.png" alt="" />
+					<div class="p-2">
+						<h2 class="text-[24px] font-openSans">
+							Even cooler feature
+						</h2>
+						<p class="text-[#777777] font-[20px] font-openSans">
+							Learning curve network effects return on investment.
+						</p>
+						<a
+							href="#"
+							class="flex text-[14px] text-[#0A2640] font-[700] font-openSans"
+							>Explore page
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-5"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div>
+					<img src="./images/serivce/service-3.png" alt="" />
+					<div class="p-2">
+						<h2 class="text-[24px] font-openSans">
+							Cool feature title
+						</h2>
+						<p class="text-[#777777] font-[20px] font-openSans">
+							Learning curve network effects return on investment.
+						</p>
+						<a
+							href="#"
+							class="flex text-[14px] text-[#0A2640] font-[700] font-openSans"
+							>Explore page
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-5"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- connect customer section -->
+		<section class="container py-16 mx-auto lg:px-0 px-5">
+			<div class="grid lg:grid-cols-2 grid-cols-1 items-center">
+				<div>
+					<img src="./images/connect-1.png" alt="" />
+				</div>
+				<div class="space-y-6">
+					<h2 class="text-[36px] font-manrope">
+						We connect our customers with the best, and help them
+						keep up-and stay open.
+					</h2>
+					<div class="space-y-5">
+						<p
+							class="flex items-center gap-6 text-[20px] font-openSans"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-5 h-5 bg-gray-700 text-white rounded-full"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M4.5 12.75l6 6 9-13.5"
+								/>
+							</svg>
+							<span>We connect our customers with the best.</span>
+						</p>
+						<p
+							class="flex items-center gap-6 text-[20px] font-openSans"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-5 h-5 bg-gray-700 text-white rounded-full"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M4.5 12.75l6 6 9-13.5"
+								/>
+							</svg>
+							<span>Advisor success customer launch party.</span>
+						</p>
+						<p
+							class="flex items-center gap-6 text-[20px] font-openSans"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-5 h-5 bg-gray-700 text-white rounded-full"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M4.5 12.75l6 6 9-13.5"
+								/>
+							</svg>
+							<span>Business-to-consumer long tail.</span>
+						</p>
+					</div>
+					<button
+						class="bg-[#0A2640] text-white font-[700] px-12 py-2 rounded-full"
+					>
+						Start now
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- connect customer section -->
+		<section class="container py-16 mx-auto lg:px-0 px-5">
+			<div
+				class="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-4 items-center"
+			>
+				<div class="space-y-10">
+					<h2 class="text-[36px] font-manrope">
+						We connect our customers with the best, and help them
+						keep up-and stay open.
+					</h2>
+					<div class="space-y-8">
+						<p
+							class="bg-[#0A2640] text-white flex items-center gap-4 px-4 py-3 rounded"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
+								/>
+							</svg>
+							<span class="font-openSans text-[16px]"
+								>We connect our customers with the best.</span
+							>
+						</p>
+						<p
+							class="bg-white text-black flex items-center gap-4 px-4 py-3 rounded shadow-xl"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+								/>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+								/>
+							</svg>
+
+							<span class="font-openSans text-[16px]"
+								>Advisor success customer launch party.</span
+							>
+						</p>
+						<p
+							class="bg-white text-black flex items-center gap-4 px-4 py-3 rounded shadow-xl"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+								/>
+							</svg>
+
+							<span class="font-openSans text-[16px]"
+								>Business-to-consumer long tail.</span
+							>
+						</p>
+					</div>
+				</div>
+				<div>
+					<img
+						src="./images/connect-2.png"
+						class="w-[444px] h-[692px] ml-auto"
+						alt=""
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonial sections -->
+		<section class="bg-[#0A2640]">
+			<div class="container py-16 mx-auto lg:px-0 px-5">
+				<div class="flex">
+					<h2 class="lg:text-[48px] text-lg text-white font-manrope">
+						An enterprise template to ramp up your company website
+					</h2>
+					<div class="flex gap-6 mt-auto">
+						<button
+							id="previousBtn"
+							class="bg-white rounded-full w-12 h-12 flex items-center justify-center p-2 hover:bg-gray-300 hover:text-black transition"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+								/>
+							</svg>
+						</button>
+						<button
+							id="nextBtn"
+							class="bg-white rounded-full w-12 h-12 flex items-center justify-center p-2 hover:bg-gray-300 hover:text-black transition"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<div class="py-20">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div
+								class="swiper-slide bg-white p-[40px] space-y-4 rounded-xl"
+							>
+								<div class="">
+									<h2 class="text-[24px] font-openSans">
+										“Buyer buzz partner network disruptive
+										non-disclosure agreement business”
+									</h2>
+									<div class="flex items-center gap-4">
+										<img
+											src="./images/testimonials/person-1.png"
+											class="w-[58px] h-[58px] rounded-full"
+											alt=""
+										/>
+										<div>
+											<h2
+												class="text-[#0A2640] font-[16px] font-[700] font-openSans"
+											>
+												Albus Dumbledore
+											</h2>
+											<h3
+												class="text-[#0A2640] font-[14px] font-openSans"
+											>
+												Manager @ Howarts
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+                            <div
+								class="swiper-slide bg-white p-[40px] space-y-4 rounded-xl"
+							>
+								<div class="">
+									<h2 class="text-[24px] font-openSans">
+										“Buyer buzz partner network disruptive
+										non-disclosure agreement business”
+									</h2>
+									<div class="flex items-center gap-4">
+										<img
+											src="./images/testimonials/person-1.png"
+											class="w-[58px] h-[58px] rounded-full"
+											alt=""
+										/>
+										<div>
+											<h2
+												class="text-[#0A2640] font-[16px] font-[700] font-openSans"
+											>
+												Albus Dumbledore
+											</h2>
+											<h3
+												class="text-[#0A2640] font-[14px] font-openSans"
+											>
+												Manager @ Howarts
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+                            <div
+								class="swiper-slide bg-white p-[40px] space-y-4 rounded-xl"
+							>
+								<div class="">
+									<h2 class="text-[24px] font-openSans">
+										“Buyer buzz partner network disruptive
+										non-disclosure agreement business”
+									</h2>
+									<div class="flex items-center gap-4">
+										<img
+											src="./images/testimonials/person-1.png"
+											class="w-[58px] h-[58px] rounded-full"
+											alt=""
+										/>
+										<div>
+											<h2
+												class="text-[#0A2640] font-[16px] font-[700] font-openSans"
+											>
+												Albus Dumbledore
+											</h2>
+											<h3
+												class="text-[#0A2640] font-[14px] font-openSans"
+											>
+												Manager @ Howarts
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+                            <div
+								class="swiper-slide bg-white p-[40px] space-y-4 rounded-xl"
+							>
+								<div class="">
+									<h2 class="text-[24px] font-openSans">
+										“Buyer buzz partner network disruptive
+										non-disclosure agreement business”
+									</h2>
+									<div class="flex items-center gap-4">
+										<img
+											src="./images/testimonials/person-1.png"
+											class="w-[58px] h-[58px] rounded-full"
+											alt=""
+										/>
+										<div>
+											<h2
+												class="text-[#0A2640] font-[16px] font-[700] font-openSans"
+											>
+												Albus Dumbledore
+											</h2>
+											<h3
+												class="text-[#0A2640] font-[14px] font-openSans"
+											>
+												Manager @ Howarts
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+                            <div
+								class="swiper-slide bg-white p-[40px] space-y-4 rounded-xl"
+							>
+								<div class="">
+									<h2 class="text-[24px] font-openSans">
+										“Buyer buzz partner network disruptive
+										non-disclosure agreement business”
+									</h2>
+									<div class="flex items-center gap-4">
+										<img
+											src="./images/testimonials/person-1.png"
+											class="w-[58px] h-[58px] rounded-full"
+											alt=""
+										/>
+										<div>
+											<h2
+												class="text-[#0A2640] font-[16px] font-[700] font-openSans"
+											>
+												Albus Dumbledore
+											</h2>
+											<h3
+												class="text-[#0A2640] font-[14px] font-openSans"
+											>
+												Manager @ Howarts
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+                            <div
+								class="swiper-slide bg-white p-[40px] space-y-4 rounded-xl"
+							>
+								<div class="">
+									<h2 class="text-[24px] font-openSans">
+										“Buyer buzz partner network disruptive
+										non-disclosure agreement business”
+									</h2>
+									<div class="flex items-center gap-4">
+										<img
+											src="./images/testimonials/person-1.png"
+											class="w-[58px] h-[58px] rounded-full"
+											alt=""
+										/>
+										<div>
+											<h2
+												class="text-[#0A2640] font-[16px] font-[700] font-openSans"
+											>
+												Albus Dumbledore
+											</h2>
+											<h3
+												class="text-[#0A2640] font-[14px] font-openSans"
+											>
+												Manager @ Howarts
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+                            <div
+								class="swiper-slide bg-white p-[40px] space-y-4 rounded-xl"
+							>
+								<div class="">
+									<h2 class="text-[24px] font-openSans">
+										“Buyer buzz partner network disruptive
+										non-disclosure agreement business”
+									</h2>
+									<div class="flex items-center gap-4">
+										<img
+											src="./images/testimonials/person-1.png"
+											class="w-[58px] h-[58px] rounded-full"
+											alt=""
+										/>
+										<div>
+											<h2
+												class="text-[#0A2640] font-[16px] font-[700] font-openSans"
+											>
+												Albus Dumbledore
+											</h2>
+											<h3
+												class="text-[#0A2640] font-[14px] font-openSans"
+											>
+												Manager @ Howarts
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+        <!-- About -->
+        <section class="container py-20 mx-auto lg:px-0 px-5">
+            <div class="w-full">
+                <img src="./images/about.png" class="w-full" alt="">
+            </div>
+        </section>
+
+
+        <!-- blog sections -->
+        <section class="container py-16 mx-auto lg:px-0 px-5">
+            <div class="text-center">
+				<p class="text-[#777777] text-[20] font-openSans">
+					Our Blogs
+				</p>
+				<h2 class="text-3xl text-black font-manrope lg:w-1/2 m-auto">
+					Handshake infographic mass market crowdfunding iteration.
+				</h2>
+			</div>
+
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-16 mt-14">
+                <!-- single blogs -->
+                <div >
+                    <img src="./images/blogs/blgo-1.png" class="w-full" alt="">
+                    <div class="space-y-4 mt-5">
+                        <p class="space-x-3 font-openSans">
+                            <span class="text-[#0A2640] font-[700] text-[16px]">Category</span>
+                            <span class="text-[#777777] font-[400]">November 22, 2022</span>
+                        </p>
+                        <h2 class="text-[20px] font-openSans">Pitch termsheet backing validation focus release.</h2>
+                        <div class="flex gap-4 items-center mt-5">
+                            <img src="./images/testimonials/person-1.png" class="w-[32px] h-[32px] rounded-full" alt="">
+                            <div>
+                                <h2 class="font-openSans text-[16px]">Chandler Bing</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single blogs -->
+                <div >
+                    <img src="./images/blogs/blog-2.png" class="w-full" alt="">
+                    <div class="space-y-4 mt-5">
+                        <p class="space-x-3 font-openSans">
+                            <span class="text-[#0A2640] font-[700] text-[16px]">Category</span>
+                            <span class="text-[#777777] font-[400]">November 22, 2022</span>
+                        </p>
+                        <h2 class="text-[20px] font-openSans">Pitch termsheet backing validation focus release.</h2>
+                        <div class="flex gap-4 items-center mt-5">
+                            <img src="./images/testimonials/person-1.png" class="w-[32px] h-[32px] rounded-full" alt="">
+                            <div>
+                                <h2 class="font-openSans text-[16px]">Chandler Bing</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single blogs -->
+                <div >
+                    <img src="./images/blogs/blog-3.png" class="w-full" alt="">
+                    <div class="space-y-4 mt-5">
+                        <p class="space-x-3 font-openSans">
+                            <span class="text-[#0A2640] font-[700] text-[16px]">Category</span>
+                            <span class="text-[#777777] font-[400]">November 22, 2022</span>
+                        </p>
+                        <h2 class="text-[20px] font-openSans">Pitch termsheet backing validation focus release.</h2>
+                        <div class="flex gap-4 items-center mt-5">
+                            <img src="./images/testimonials/person-1.png" class="w-[32px] h-[32px] rounded-full" alt="">
+                            <div>
+                                <h2 class="font-openSans text-[16px]">Chandler Bing</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load more button -->
+            <div class="flex items-center justify-center mt-16">
+                <button class="border-2 border-black px-10 py-3 rounded-full hover:bg-black hover:text-white transition">Load more</button>
+            </div>
+
+        </section>
+
+
+        <!-- subscribe -->
+        <section class="container py-20 mx-auto lg:px-0 px-5 bg-[#0A2640] rounded-[12px]" style="
+				background-image: url('./images/subscribe-bg.png');
+				background-repeat: no-repeat;
+				background-position: right top;
+			">
+            <div class="lg:w-[716px] mx-auto">
+                <h2 class="lg:text-[48px] text-2xl font-manrope lg:leading-[50px] text-white font-[400]">An enterprise template to ramp up your company website</h2>
+                <div class="flex items-center justify-center">
+                    <div class="px-6 flex gap-6 items-center mt-6">
+                        <input type="text" placeholder="Your emaiil address" class="lg:w-[370px] bg-white py-2 px-3 rounded-full">
+                        <button
+                                class="bg-[#65E4A3] text-[#0A2640] lg:px-12 lg:py-2 px-4 py-2 border-2 border-[#69E6A6] rounded-full font-[700] font-openSans"
+                            >
+                                Start now
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer -->
+        <footer class="container py-20 mx-auto lg:px-0 px-5">
+            <div class="grid grid-cols-12">
+                <div class="lg:col-span-4 col-span-12 space-y-6">
+                    <img src="./images/logo-light.png" alt="">
+                    <p class="text-[16px] text-[#777777]">Social media validation business model canvas graphical user interface launch party creative facebook iPad twitter.</p>
+                    <p class="text-[16px] text-[#777777]">All rights reserved.</p>
+                </div>
+                <div class="col-span-8 lg:mt-0 mt-10">
+                    <div class="grid lg:grid-cols-3 lg:gap-0 gap-6">
+                        <div>
+                            <h2 class="text-black font-[700]">Landings</h2>
+                            <div class="flex flex-col gap-4 mt-6">
+                                <a href="index.html" class="text-[#777777] capitalize">Home</a>
+                                <a href="#" class="text-[#777777] capitalize">products</a>
+                                <a href="#" class="text-[#777777] capitalize">services</a>
+                            </div>
+                        </div>
+                         <div>
+                            <h2 class="text-black font-[700]">Company</h2>
+                            <div class="flex flex-col gap-4 mt-6">
+                                <a href="index.html" class="text-[#777777] capitalize">Home</a>
+                                <a href="#" class="text-[#777777] capitalize">Careers <span class="bg-[#65E4A3] text-[12px] px-4 py-1 text-black font-semibold rounded-full">hiring!</span></a>
+                                <a href="#" class="text-[#777777] capitalize">services</a>
+                            </div>
+                        </div>
+                         <div>
+                            <h2 class="text-black font-[700]">Contacts</h2>
+                            <div class="flex flex-col gap-4 mt-6">
+                                <a href="index.html" class="text-[#777777] capitalize">Home</a>
+                                <a href="#" class="text-[#777777] capitalize">products</a>
+                                <a href="#" class="text-[#777777] capitalize">services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </footer>
+
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script src="./js/app.js"></script>
+	</body>
+</html>
